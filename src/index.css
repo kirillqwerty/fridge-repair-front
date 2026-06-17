@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color-scheme: light;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Space Grotesk', 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.01em;
+}
+
+code {
+    font-family: 'IBM Plex Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+@layer base {
+    :root {
+        --background: 210 40% 99%;
+        --foreground: 222 47% 11%;
+        --card: 0 0% 100%;
+        --card-foreground: 222 47% 11%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222 47% 11%;
+        --primary: 214 88% 45%;
+        --primary-foreground: 210 40% 98%;
+        --secondary: 210 40% 96%;
+        --secondary-foreground: 222 47% 11%;
+        --muted: 210 30% 96%;
+        --muted-foreground: 215 16% 40%;
+        --accent: 204 94% 94%;
+        --accent-foreground: 222 47% 11%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 214 32% 90%;
+        --input: 214 32% 90%;
+        --ring: 214 88% 45%;
+        --chart-1: 214 88% 45%;
+        --chart-2: 204 94% 60%;
+        --chart-3: 230 90% 60%;
+        --chart-4: 195 85% 50%;
+        --chart-5: 220 85% 65%;
+        --radius: 0.75rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+    /* Make selection sky-blue */
+    ::selection {
+        background-color: hsl(204 94% 84%);
+        color: hsl(222 47% 11%);
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+    .container-page {
+        @apply max-w-6xl mx-auto px-4 sm:px-6;
+    }
+    .section-pad {
+        @apply py-12 sm:py-16 lg:py-20;
+    }
+    .soft-shadow {
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+    .lift-shadow {
+        transition: box-shadow 220ms ease, transform 220ms ease;
+    }
+    .lift-shadow:hover {
+        box-shadow: 0 14px 40px rgba(15, 23, 42, 0.12);
+    }
+    .hero-bg {
+        background-image:
+            radial-gradient(1200px circle at 15% 0%, hsl(204 94% 94%) 0%, transparent 55%),
+            radial-gradient(900px circle at 85% 0%, hsl(214 88% 92%) 0%, transparent 50%);
+    }
+    .glass-card {
+        background: hsla(0, 0%, 100%, 0.72);
+        backdrop-filter: blur(12px) saturate(120%);
+        -webkit-backdrop-filter: blur(12px) saturate(120%);
+        border: 1px solid hsl(214 32% 90%);
+    }
+    .accent-strip-bg {
+        background-image: linear-gradient(90deg, hsl(204 94% 94%) 0%, hsl(210 40% 99%) 55%, hsl(214 88% 92%) 100%);
+    }
+    .tabular-nums {
+        font-variant-numeric: tabular-nums;
+    }
+}
+
+@layer base {
+    [data-debug-wrapper='true'] {
+        display: contents !important;
+    }
+
+    [data-debug-wrapper='true'] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-style: inherit;
+        border-bottom-style: inherit;
+        border-left-color: inherit;
+        border-right-color: inherit;
+        border-top-color: inherit;
+        border-bottom-color: inherit;
+    }
+}
