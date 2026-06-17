@@ -54,20 +54,19 @@ export default function HomePage() {
     "Ремонт холодильников в Минске — выезд за 30 минут, гарантия 1 год";
   const description =
     "Профессиональный ремонт холодильников всех популярных марок на дому в Минске. Гарантия 1 год, фиксированные цены, без выходных 8:00–22:00.";
+  const publicUrl = process.env.PUBLIC_URL || "";
+  const siteBaseUrl =
+    typeof window !== "undefined" ? `${window.location.origin}${publicUrl}` : "";
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <SeoHead
         title={title}
         description={description}
-        canonical={
-          typeof window !== "undefined"
-            ? window.location.origin + "/"
-            : undefined
-        }
+        canonical={siteBaseUrl ? `${siteBaseUrl}/` : undefined}
         ogImage={
-          typeof window !== "undefined"
-            ? window.location.origin + "/assets/fridge-repair-hero.svg"
+          siteBaseUrl
+            ? `${siteBaseUrl}/assets/refrigerator_repair_logo.png`
             : undefined
         }
         jsonLd={businessSchema}

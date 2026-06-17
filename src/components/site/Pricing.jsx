@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Calculator, CheckCircle2 } from "lucide-react";
+import { scrollToSection } from "@/lib/scroll";
 
 function priceLabel(s) {
   if (!s) return "—";
@@ -41,7 +42,13 @@ export default function Pricing({ services }) {
               Прозрачные цены — никаких скрытых платежей. Цены в белорусских рублях.
             </p>
           </div>
-          <a href="#lead">
+          <a
+            href="#lead"
+            onClick={(event) => {
+              event.preventDefault();
+              scrollToSection("lead");
+            }}
+          >
             <Button className="gap-2" data-testid="pricing-calc-cta-button">
               <Calculator className="w-4 h-4" /> Рассчитать стоимость
             </Button>

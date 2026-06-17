@@ -1,5 +1,11 @@
 import { Suspense, useState } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  HashRouter,
+} from "react-router-dom";
 import "@/App.css";
 import HomePage from "@/pages/HomePage";
 import BrandPage from "@/pages/BrandPage";
@@ -17,7 +23,8 @@ function App() {
   return (
     <div className="App">
       <AuthProvider>
-        <BrowserRouter>
+        {/* <BrowserRouter> */}
+        <HashRouter>
           <IntroLoader onFinish={() => setIntroFinished(true)} />
 
           <div
@@ -48,7 +55,8 @@ function App() {
               </Routes>
             </Suspense>
           </div>
-        </BrowserRouter>
+        </HashRouter>
+        {/* </BrowserRouter> */}
       </AuthProvider>
     </div>
   );

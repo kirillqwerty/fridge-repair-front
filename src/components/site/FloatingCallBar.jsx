@@ -1,6 +1,7 @@
 import { Phone, Wrench } from "lucide-react";
 import { useEffect, useState } from "react";
 import { formatPhoneHref } from "@/lib/api";
+import { scrollToSection } from "@/lib/scroll";
 
 export default function FloatingCallBar({ phone }) {
   const [show, setShow] = useState(false);
@@ -32,6 +33,10 @@ export default function FloatingCallBar({ phone }) {
         </a>
         <a
           href="#lead"
+          onClick={(event) => {
+            event.preventDefault();
+            scrollToSection("lead");
+          }}
           className="flex-1 inline-flex items-center justify-center gap-2 h-12 rounded-xl bg-secondary text-secondary-foreground border border-border font-medium"
           data-testid="floating-master-button"
         >

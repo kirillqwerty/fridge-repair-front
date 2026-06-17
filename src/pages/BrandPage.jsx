@@ -15,6 +15,7 @@ import BrandsGrid from "@/components/site/BrandsGrid";
 import AppLoader from "@/components/site/AppLoader";
 import { api, formatPhoneHref } from "@/lib/api";
 import { localBusinessSchema } from "@/lib/seo";
+import { scrollToSection } from "@/lib/scroll";
 
 const BRAND_TITLE_MAP = {
   atlant: "Атлант",
@@ -107,6 +108,9 @@ export default function BrandPage() {
   const description =
     brand.meta_description ||
     `Ремонт холодильников ${brand.name} в Минске на дому. Гарантия 1 год. Звоните: ${phone}.`;
+  const publicUrl = process.env.PUBLIC_URL || "";
+  const siteBaseUrl =
+    typeof window !== "undefined" ? `${window.location.origin}${publicUrl}` : "";
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -116,7 +120,7 @@ export default function BrandPage() {
         position: 1,
         name: "Главная",
         item:
-          typeof window !== "undefined" ? window.location.origin + "/" : "/",
+          siteBaseUrl ? `${siteBaseUrl}/` : "/",
       },
       {
         "@type": "ListItem",
@@ -139,8 +143,8 @@ export default function BrandPage() {
           typeof window !== "undefined" ? window.location.href : undefined
         }
         ogImage={
-          typeof window !== "undefined"
-            ? window.location.origin + "/assets/fridge-repair-hero.svg"
+          siteBaseUrl
+            ? `${siteBaseUrl}/assets/refrigerator_repair_logo.png`
             : undefined
         }
         jsonLd={localBusinessSchema(contacts, site.stats)}
@@ -186,7 +190,13 @@ export default function BrandPage() {
                   </p>
                 )}
                 <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                  <a href="#lead">
+                  <a
+                    href="#lead"
+                    onClick={(event) => {
+                      event.preventDefault();
+                      scrollToSection("lead");
+                    }}
+                  >
                     <Button
                       size="lg"
                       className="gap-2 w-full sm:w-auto h-12 px-6"

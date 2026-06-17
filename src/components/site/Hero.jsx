@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { formatPhoneHref } from "@/lib/api";
+import { scrollToSection } from "@/lib/scroll";
 
 const TOP_BRANDS = [
   { slug: "lg", name: "LG" },
@@ -57,7 +58,13 @@ export default function Hero({ contacts, stats }) {
             </p>
 
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <a href="#lead">
+              <a
+                href="#lead"
+                onClick={(event) => {
+                  event.preventDefault();
+                  scrollToSection("lead");
+                }}
+              >
                 <Button
                   size="lg"
                   className="gap-2 w-full sm:w-auto h-12 px-6"

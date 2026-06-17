@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Snowflake } from "lucide-react";
+import fridgeLoader from "@/assets/fridge-loader.gif";
 
 const INTRO_STORAGE_KEY = "fridge_site_intro_seen";
 const INTRO_SHOW_TIME = 1800;
@@ -58,7 +59,7 @@ export default function IntroLoader({ onFinish }) {
         }`}
       >
         <img
-          src="/assets/fridge-loader.gif"
+          src={fridgeLoader}
           alt=""
           className="mx-auto w-44 sm:w-56 h-auto object-contain"
           draggable="false"

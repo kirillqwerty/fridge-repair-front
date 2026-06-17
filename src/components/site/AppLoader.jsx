@@ -1,4 +1,5 @@
 import { Snowflake } from "lucide-react";
+import fridgeLoader from "@/assets/fridge-loader.gif";
 
 export default function AppLoader({
   fullScreen = true,
@@ -15,7 +16,7 @@ export default function AppLoader({
     >
       <div className="text-center px-6">
         <img
-          src="/assets/fridge-loader.gif"
+          src={fridgeLoader}
           alt=""
           className="mx-auto w-40 sm:w-48 h-auto object-contain"
           draggable="false"
