@@ -37,9 +37,9 @@ export default function Pricing({ services }) {
       <div className="container-page">
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-3 mb-8">
           <div>
-            <h2 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight">Стоимость ремонта</h2>
+            <h2 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight">Цены и примеры смет</h2>
             <p className="text-sm sm:text-base text-muted-foreground mt-1">
-              Прозрачные цены — никаких скрытых платежей. Цены в белорусских рублях.
+              Основные работы и готовые примеры смет. Итоговую стоимость фиксируем до начала ремонта.
             </p>
           </div>
           <a
@@ -95,7 +95,7 @@ export default function Pricing({ services }) {
 
         {/* Examples */}
         <div className="mt-10">
-          <h3 className="font-display text-xl font-semibold mb-4">Примеры сметы</h3>
+          <h3 className="font-display text-xl font-semibold mb-4">Примеры расчета стоимости</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <CostExample
               title="Ремонт компрессора (не холодит)"

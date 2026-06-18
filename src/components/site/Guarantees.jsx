@@ -33,8 +33,8 @@ export default function Guarantees({ guarantees }) {
     <section id="guarantees" className="section-pad bg-secondary/30" data-testid="guarantees-section">
       <div className="container-page">
         <div className="max-w-2xl">
-          <h2 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight">Гарантии и условия</h2>
-          <p className="text-sm sm:text-base text-muted-foreground mt-1">Мы отвечаем за качество, работаем прозрачно и честно</p>
+          <h2 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight">Условия и гарантии</h2>
+          <p className="text-sm sm:text-base text-muted-foreground mt-1">Объединили главные условия работы, оплаты и гарантий в одном разделе</p>
         </div>
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4" data-testid="guarantees-groups">
           <Group data={guarantees.result} />

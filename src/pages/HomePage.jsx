@@ -1,8 +1,6 @@
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import Hero from "@/components/site/Hero";
-import SocialProof from "@/components/site/SocialProof";
-import Benefits from "@/components/site/Benefits";
 import Pricing from "@/components/site/Pricing";
 import Portfolio from "@/components/site/Portfolio";
 import Guarantees from "@/components/site/Guarantees";
@@ -77,15 +75,13 @@ export default function HomePage() {
 
       <main className="flex-1">
         <Hero contacts={data.contacts} stats={data.stats} />
-        <SocialProof reviews={data.reviews} stats={data.stats} />
-        <Benefits benefits={data.benefits} />
+        <BrandsGrid brands={data.brands} />
         <Pricing services={data.services} />
+        <Masters masters={data.masters} />
+        <ReviewsExtended reviews={data.reviews} />
         <Portfolio portfolio={data.portfolio} />
         <Guarantees guarantees={data.guarantees} />
         <Process steps={data.process_steps} />
-        <Masters masters={data.masters} />
-        <BrandsGrid brands={data.brands} />
-        <ReviewsExtended reviews={data.reviews} />
         <FAQ faq={data.faq} />
         <LeadForm contacts={data.contacts} />
       </main>
