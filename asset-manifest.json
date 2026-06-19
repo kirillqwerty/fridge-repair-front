@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/fridge-repair-front/static/css/main.6d548018.css",
-    "main.js": "/fridge-repair-front/static/js/main.7a00d436.js",
+    "main.css": "/fridge-repair-front/static/css/main.020fa6a0.css",
+    "main.js": "/fridge-repair-front/static/js/main.abc9fec4.js",
     "static/media/fridge-loader.gif": "/fridge-repair-front/static/media/fridge-loader.b94b201fa4431cbe5e1f.gif",
     "static/media/refrigerator_repair_logo.png": "/fridge-repair-front/static/media/refrigerator_repair_logo.74edc3b9cdba822ad389.png",
+    "static/media/social-viber.png": "/fridge-repair-front/static/media/social-viber.70872a05398beec1f80b.png",
+    "static/media/social-telegram.png": "/fridge-repair-front/static/media/social-telegram.b19c69a936bfae0ec011.png",
     "index.html": "/fridge-repair-front/index.html",
-    "main.6d548018.css.map": "/fridge-repair-front/static/css/main.6d548018.css.map",
-    "main.7a00d436.js.map": "/fridge-repair-front/static/js/main.7a00d436.js.map"
+    "main.020fa6a0.css.map": "/fridge-repair-front/static/css/main.020fa6a0.css.map",
+    "main.abc9fec4.js.map": "/fridge-repair-front/static/js/main.abc9fec4.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d548018.css",
-    "static/js/main.7a00d436.js"
+    "static/css/main.020fa6a0.css",
+    "static/js/main.abc9fec4.js"
   ]
 }
